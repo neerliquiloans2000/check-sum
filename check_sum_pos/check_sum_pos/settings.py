@@ -75,8 +75,28 @@ WSGI_APPLICATION = 'check_sum_pos.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+         'ENGINE': 'django.db.backends.mysql',
+        'DB_HOST':'ll-staging-rds-cluster.cluster-cgyu6lttldv9.ap-south-1.rds.amazonaws.com',
+        'DB_USER':'pareshkanjani',
+        'DB_PASSWORD':'JNbYiQbw',
+        'DB_DATABASE':'liquiloans',
+        'DB_PORT':3306
+    },
+    'los' : {
+        'ENGINE': 'django.db.backends.mysql',
+        'DB_HOST':'ll-staging-rds-cluster.cluster-cgyu6lttldv9.ap-south-1.rds.amazonaws.com',
+        'DB_USER':'pareshkanjani',
+        'DB_PASSWORD':'JNbYiQbw',
+        'DB_DATABASE':'liquiloans',
+        'DB_PORT':3306
+    },
+    'mifos' : {
+        'ENGINE': 'django.db.backends.mysql',
+       'DB_MIFOS_HOST':'ll-staging-rds-cluster.cluster-cgyu6lttldv9.ap-south-1.rds.amazonaws.com',
+        'DB_MIFOS_USER':'liquiloans',
+        'DB_MIFOS_PASSWORD':'ayxcHzl7k0PGJwUI',
+        'DB_MIFOS_DATABASE':'fineract_default',
+        'DB_MIFOS_PORT':3306
     }
 }
 
